@@ -176,13 +176,11 @@ public class Fuzzer {
 
         // If we don't need to run all the mutations if we find a failure
         // we could System.exit(1) in the runCommand method and keep it static.
-        /*
         Fuzzer fuzzer = new Fuzzer();
         fuzzer.runCommand(builder, seedInput, mutatedInputs);
         if (fuzzer.nonZeroFlag) {
             System.exit(1);
         }
-        */
     }
 
     private static ProcessBuilder getProcessBuilderForCommand(String command, String workingDirectory) {
