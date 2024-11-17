@@ -8,15 +8,7 @@ on:
 jobs:
   fuzzer:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Run Fuzzer"
-      - run: echo "$PWD"
-      - run: ls
-      - run: cat *.md
-      - run: javac --version
       - run: javac Fuzzer.java 
       - run: java Fuzzer "./html_parser_linux_x86_64"
