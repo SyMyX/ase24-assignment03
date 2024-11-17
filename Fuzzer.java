@@ -23,7 +23,7 @@ public class Fuzzer {
         String workingDirectory = "./";
 
         if (!Files.exists(Paths.get(workingDirectory, commandToFuzz))) {
-            throw new RuntimeException("Could not find command '%s'.".formatted(commandToFuzz));
+            throw new RuntimeException("Could not find command '" + commandToFuzz + "'.");
         }
 
         ProcessBuilder builder = getProcessBuilderForCommand(commandToFuzz, workingDirectory);
