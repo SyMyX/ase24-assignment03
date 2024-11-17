@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Run Fuzzer"
+      - run: echo "$PWD"
+      - run: javac --version
       - run: javac Fuzzer.java 
       - run: java Fuzzer "./html_parser_linux_x86_64"
